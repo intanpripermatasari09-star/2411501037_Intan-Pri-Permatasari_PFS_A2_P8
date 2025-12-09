@@ -1,0 +1,186 @@
+/* Import font dari Google Fonts (misalnya: Poppins) untuk tampilan yang lebih modern */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #185ADB; /* Biru Cerah untuk Aksi */
+    --secondary-color: #0A1931; /* Biru Tua/Navy untuk Teks & Header */
+    --background-light: #F0F4F8; /* Latar Belakang Sangat Cerah */
+    --text-dark: #333;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Shadow halus */
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.2em;
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Form Styling */
+#mahasiswaForm {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#mahasiswaForm label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.95em;
+}
+
+#mahasiswaForm input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#mahasiswaForm input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(24, 90, 219, 0.2);
+}
+
+/* Button Styling */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-right: 10px;
+}
+
+#submitButton {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#submitButton:hover {
+    background-color: #1449b2;
+    transform: translateY(-1px);
+}
+
+#cancelButton {
+    background-color: #6c757d; /* Abu-abu netral */
+    color: white;
+}
+
+#cancelButton:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+}
+
+/* Table Styling */
+#mahasiswaTable {
+    width: 100%;
+    border-collapse: separate; /* Gunakan separate untuk border-radius di cell */
+    border-spacing: 0;
+    margin-top: 30px;
+    overflow: hidden; /* Penting untuk border-radius */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+#mahasiswaTable thead th {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+#mahasiswaTable tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+#mahasiswaTable tbody tr:hover {
+    background-color: #f6f9fc; /* Hover effect */
+}
+
+#mahasiswaTable td {
+    border-bottom: 1px solid #eee;
+    padding: 12px;
+    vertical-align: middle;
+}
+
+/* Action Button Table */
+.action-btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.edit-btn {
+    background-color: var(--warning-color);
+    color: var(--text-dark);
+}
+
+.edit-btn:hover {
+    background-color: #e0b400;
+}
+
+.delete-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+#loadingMessage {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 20px;
+}

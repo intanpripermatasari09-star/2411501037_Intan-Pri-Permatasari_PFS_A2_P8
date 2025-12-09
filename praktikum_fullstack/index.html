@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Mahasiswa Native</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Manajemen Data Mahasiswa</h1>
+        
+        <form id="mahasiswaForm">
+            <h2>Tambah Data Mahasiswa</h2>
+            <input type="hidden" id="id" name="id">
+            
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+            
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" name="nim" required>
+            
+            <button type="submit" id="submitButton">Simpan</button>
+            <button type="button" id="cancelButton" style="display: none;">Batal Ubah</button>
+        </form>
+
+        <hr>
+
+        <h2>Daftar Mahasiswa</h2>
+        <table id="mahasiswaTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Produ</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+
+        <p id="loadingMessage" style="text-align: center; color: gray;">Memuat data...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
